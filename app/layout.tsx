@@ -1,6 +1,7 @@
 import './globals.css'
 import { Footer } from './components/Shared/Footer'
 import { Navbar } from './components/Shared/Navbar'
+import { Sidebar } from './components/Shared/Sidebar/Sidebar';
 
 export default function RootLayout({
   children,
@@ -16,7 +17,10 @@ export default function RootLayout({
       <head />
       <body className='flex flex-col h-screen justify-between'>
         <Navbar />
-        {children}
+        <div className='flex flex-row justify-center'>
+          <Sidebar />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
